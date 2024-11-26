@@ -1,0 +1,907 @@
+{
+  "id": "#",
+  "properties": {
+    "appConfig": {
+      "id": "#appConfig",
+      "properties": {
+        "icon": {
+          "title": "Nuxt Icon",
+          "description": "Configure Nuxt Icon module preferences.",
+          "tags": [
+            "@studioIcon material-symbols:star"
+          ],
+          "id": "#appConfig/icon",
+          "properties": {
+            "size": {
+              "title": "Icon Size",
+              "description": "Set the default icon size.",
+              "tags": [
+                "@studioIcon material-symbols:format-size-rounded"
+              ],
+              "tsType": "string | undefined",
+              "id": "#appConfig/icon/size",
+              "default": {},
+              "type": "any"
+            },
+            "class": {
+              "title": "CSS Class",
+              "description": "Set the default CSS class.",
+              "tags": [
+                "@studioIcon material-symbols:css"
+              ],
+              "id": "#appConfig/icon/class",
+              "default": "",
+              "type": "string"
+            },
+            "attrs": {
+              "title": "Default Attributes",
+              "description": "Attributes applied to every icon component.\n\n@default { \"aria-hidden\": true }",
+              "tags": [
+                "@studioIcon material-symbols:settings"
+              ],
+              "tsType": "Record<string, string | number | boolean>",
+              "id": "#appConfig/icon/attrs",
+              "default": {
+                "aria-hidden": true
+              },
+              "type": "object"
+            },
+            "mode": {
+              "title": "Default Rendering Mode",
+              "description": "Set the default rendering mode for the icon component",
+              "enum": [
+                "css",
+                "svg"
+              ],
+              "tags": [
+                "@studioIcon material-symbols:move-down-rounded"
+              ],
+              "id": "#appConfig/icon/mode",
+              "default": "css",
+              "type": "string"
+            },
+            "aliases": {
+              "title": "Icon aliases",
+              "description": "Define Icon aliases to update them easily without code changes.",
+              "tags": [
+                "@studioIcon material-symbols:star-rounded"
+              ],
+              "tsType": "{ [alias: string]: string }",
+              "id": "#appConfig/icon/aliases",
+              "default": {},
+              "type": "object"
+            },
+            "cssSelectorPrefix": {
+              "title": "CSS Selector Prefix",
+              "description": "Set the default CSS selector prefix.",
+              "tags": [
+                "@studioIcon material-symbols:format-textdirection-l-to-r"
+              ],
+              "id": "#appConfig/icon/cssSelectorPrefix",
+              "default": "i-",
+              "type": "string"
+            },
+            "cssLayer": {
+              "title": "CSS Layer Name",
+              "description": "Set the default CSS `@layer` name.",
+              "tags": [
+                "@studioIcon material-symbols:layers"
+              ],
+              "tsType": "string | undefined",
+              "id": "#appConfig/icon/cssLayer",
+              "default": {},
+              "type": "any"
+            },
+            "cssWherePseudo": {
+              "title": "Use CSS `:where()` Pseudo Selector",
+              "description": "Use CSS `:where()` pseudo selector to reduce specificity.",
+              "tags": [
+                "@studioIcon material-symbols:low-priority"
+              ],
+              "id": "#appConfig/icon/cssWherePseudo",
+              "default": true,
+              "type": "boolean"
+            },
+            "collections": {
+              "title": "Icon Collections",
+              "description": "List of known icon collections name. Used to resolve collection name ambiguity.\ne.g. `simple-icons-github` -> `simple-icons:github` instead of `simple:icons-github`\n\nWhen not provided, will use the full Iconify collection list.",
+              "tags": [
+                "@studioIcon material-symbols:format-list-bulleted"
+              ],
+              "tsType": "string[] | null",
+              "id": "#appConfig/icon/collections",
+              "default": null,
+              "type": "any"
+            },
+            "provider": {
+              "title": "Icon Provider",
+              "description": "Provider to use for fetching icons\n\n- `server` - Fetch icons with a server handler\n- `iconify` - Fetch icons with Iconify API, purely client-side\n\n`server` by default; `iconify` when `ssr: false`",
+              "enum": [
+                "server",
+                "iconify"
+              ],
+              "tags": [
+                "@studioIcon material-symbols:cloud"
+              ],
+              "type": "\"server\" | \"iconify\" | undefined",
+              "id": "#appConfig/icon/provider"
+            },
+            "iconifyApiEndpoint": {
+              "title": "Iconify API Endpoint URL",
+              "description": "Define a custom Iconify API endpoint URL. Useful if you want to use a self-hosted Iconify API. Learn more: https://iconify.design/docs/api.",
+              "tags": [
+                "@studioIcon material-symbols:api"
+              ],
+              "id": "#appConfig/icon/iconifyApiEndpoint",
+              "default": "https://api.iconify.design",
+              "type": "string"
+            },
+            "fallbackToApi": {
+              "title": "Fallback to Iconify API",
+              "description": "Fallback to Iconify API if server provider fails to found the collection.",
+              "tags": [
+                "@studioIcon material-symbols:public"
+              ],
+              "enum": [
+                true,
+                false,
+                "server-only",
+                "client-only"
+              ],
+              "type": "boolean | \"server-only\" | \"client-only\"",
+              "id": "#appConfig/icon/fallbackToApi",
+              "default": true
+            },
+            "localApiEndpoint": {
+              "title": "Local API Endpoint Path",
+              "description": "Define a custom path for the local API endpoint.",
+              "tags": [
+                "@studioIcon material-symbols:api"
+              ],
+              "id": "#appConfig/icon/localApiEndpoint",
+              "default": "/api/_nuxt_icon",
+              "type": "string"
+            },
+            "fetchTimeout": {
+              "title": "Fetch Timeout",
+              "description": "Set the timeout for fetching icons.",
+              "tags": [
+                "@studioIcon material-symbols:timer"
+              ],
+              "id": "#appConfig/icon/fetchTimeout",
+              "default": 1500,
+              "type": "number"
+            },
+            "customize": {
+              "title": "Customize callback",
+              "description": "Customize icon content (replace stroke-width, colors, etc...).",
+              "tags": [
+                "@studioIcon material-symbols:edit"
+              ],
+              "type": "IconifyIconCustomizeCallback",
+              "id": "#appConfig/icon/customize"
+            }
+          },
+          "type": "object",
+          "default": {
+            "size": {},
+            "class": "",
+            "attrs": {
+              "aria-hidden": true
+            },
+            "mode": "css",
+            "aliases": {},
+            "cssSelectorPrefix": "i-",
+            "cssLayer": {},
+            "cssWherePseudo": true,
+            "collections": null,
+            "iconifyApiEndpoint": "https://api.iconify.design",
+            "fallbackToApi": true,
+            "localApiEndpoint": "/api/_nuxt_icon",
+            "fetchTimeout": 1500
+          }
+        },
+        "ui": {
+          "title": "UI",
+          "description": "UI Customization.",
+          "tags": [
+            "@studioIcon i-mdi-palette-outline"
+          ],
+          "id": "#appConfig/ui",
+          "properties": {
+            "icons": {
+              "title": "Icons",
+              "description": "Manage icons used in Repo-Booster.",
+              "tags": [
+                "@studioIcon i-mdi-application-settings-outline"
+              ],
+              "id": "#appConfig/ui/icons",
+              "properties": {
+                "search": {
+                  "type": "string",
+                  "title": "Search Bar",
+                  "description": "Icon to display in the search bar.",
+                  "default": "i-heroicons-magnifying-glass-20-solid",
+                  "tags": [
+                    "@studioInput icon",
+                    "@studioIcon i-mdi-magnify"
+                  ],
+                  "id": "#appConfig/ui/icons/search"
+                },
+                "dark": {
+                  "type": "string",
+                  "title": "Dark mode",
+                  "description": "Icon of color mode button for dark mode.",
+                  "default": "i-heroicons-moon-20-solid",
+                  "tags": [
+                    "@studioInput icon",
+                    "@studioIcon i-mdi-moon-waning-crescent"
+                  ],
+                  "id": "#appConfig/ui/icons/dark"
+                },
+                "light": {
+                  "type": "string",
+                  "title": "Light mode",
+                  "description": "Icon of color mode button for light mode.",
+                  "default": "i-heroicons-sun-20-solid",
+                  "tags": [
+                    "@studioInput icon",
+                    "@studioIcon i-mdi-white-balance-sunny"
+                  ],
+                  "id": "#appConfig/ui/icons/light"
+                },
+                "external": {
+                  "type": "string",
+                  "title": "External Link",
+                  "description": "Icon for external link.",
+                  "default": "i-heroicons-arrow-up-right-20-solid",
+                  "tags": [
+                    "@studioInput icon",
+                    "@studioIcon i-mdi-arrow-top-right"
+                  ],
+                  "id": "#appConfig/ui/icons/external"
+                },
+                "chevron": {
+                  "type": "string",
+                  "title": "Chevron",
+                  "description": "Icon for chevron.",
+                  "default": "i-heroicons-chevron-down-20-solid",
+                  "tags": [
+                    "@studioInput icon",
+                    "@studioIcon i-mdi-chevron-down"
+                  ],
+                  "id": "#appConfig/ui/icons/chevron"
+                },
+                "hash": {
+                  "type": "string",
+                  "title": "Hash",
+                  "description": "Icon for hash anchors.",
+                  "default": "i-heroicons-hashtag-20-solid",
+                  "tags": [
+                    "@studioInput icon",
+                    "@studioIcon i-ph-hash"
+                  ],
+                  "id": "#appConfig/ui/icons/hash"
+                }
+              },
+              "type": "object",
+              "default": {
+                "search": "i-heroicons-magnifying-glass-20-solid",
+                "dark": "i-heroicons-moon-20-solid",
+                "light": "i-heroicons-sun-20-solid",
+                "external": "i-heroicons-arrow-up-right-20-solid",
+                "chevron": "i-heroicons-chevron-down-20-solid",
+                "hash": "i-heroicons-hashtag-20-solid"
+              }
+            },
+            "primary": {
+              "type": "string",
+              "title": "Primary",
+              "description": "Primary color of your UI.",
+              "default": "blue",
+              "required": [
+                "blue",
+                "green",
+                "gray",
+                "black",
+                "white"
+              ],
+              "tags": [
+                "@studioInput string",
+                "@studioIcon i-mdi-palette-outline"
+              ],
+              "id": "#appConfig/ui/primary"
+            },
+            "gray": {
+              "type": "string",
+              "title": "Gray",
+              "description": "Gray color of your UI.",
+              "default": "cool",
+              "required": [
+                "slate",
+                "cool",
+                "zinc",
+                "neutral",
+                "stone"
+              ],
+              "tags": [
+                "@studioInput string",
+                "@studioIcon i-mdi-palette-outline"
+              ],
+              "id": "#appConfig/ui/gray"
+            }
+          },
+          "type": "object",
+          "default": {
+            "icons": {
+              "search": "i-heroicons-magnifying-glass-20-solid",
+              "dark": "i-heroicons-moon-20-solid",
+              "light": "i-heroicons-sun-20-solid",
+              "external": "i-heroicons-arrow-up-right-20-solid",
+              "chevron": "i-heroicons-chevron-down-20-solid",
+              "hash": "i-heroicons-hashtag-20-solid"
+            },
+            "primary": "blue",
+            "gray": "cool"
+          }
+        },
+        "seo": {
+          "title": "SEO",
+          "description": "SEO configuration for Repo-Booster.",
+          "tags": [
+            "@studioIcon i-ph-app-window"
+          ],
+          "id": "#appConfig/seo",
+          "properties": {
+            "siteName": {
+              "type": "string",
+              "title": "Site Name",
+              "description": "Name used in ogSiteName and used as part of your page title (e.g., My page title - Repo-Booster).",
+              "default": "Repo-Booster Documentation",
+              "tags": [
+                "@studioInput string",
+                "@studioIcon i-mdi-web"
+              ],
+              "id": "#appConfig/seo/siteName"
+            }
+          },
+          "type": "object",
+          "default": {
+            "siteName": "Repo-Booster Documentation"
+          }
+        },
+        "header": {
+          "title": "Header",
+          "description": "Header configuration.",
+          "tags": [
+            "@studioIcon i-mdi-page-layout-header"
+          ],
+          "id": "#appConfig/header",
+          "properties": {
+            "logo": {
+              "type": "string",
+              "title": "Repo-Booster",
+              "description": "Header image for Repo-Booster.",
+              "default": "/Repo-Booster-icon.png",
+              "tags": [
+                "@studioInput media",
+                "@studioIcon i-mdi-image-filter-center-focus-strong-outline"
+              ],
+              "id": "#appConfig/header/logo"
+            },
+            "search": {
+              "type": "boolean",
+              "title": "Search Bar",
+              "description": "Hide or display the search bar.",
+              "default": true,
+              "tags": [
+                "@studioInput boolean",
+                "@studioIcon i-mdi-magnify"
+              ],
+              "id": "#appConfig/header/search"
+            },
+            "colorMode": {
+              "type": "boolean",
+              "title": "Color Mode",
+              "description": "Hide or display the color mode button in your header.",
+              "default": true,
+              "tags": [
+                "@studioInput boolean",
+                "@studioIcon i-mdi-moon-waning-crescent"
+              ],
+              "id": "#appConfig/header/colorMode"
+            },
+            "links": {
+              "type": "array",
+              "title": "Links",
+              "description": "Array of links displayed in the header.",
+              "default": [
+                {
+                  "icon": "i-simple-icons-github",
+                  "to": "https://github.com/repo-booster",
+                  "target": "_blank",
+                  "ariaLabel": "Repo-Booster GitHub Repository"
+                },
+                {
+                  "icon": "i-simple-icons-discord",
+                  "to": "https://discord.com/invite/repo-booster",
+                  "target": "_blank",
+                  "ariaLabel": "Repo-Booster Discord"
+                }
+              ],
+              "tags": [
+                "@studioInput array",
+                "@studioIcon i-mdi-link-variant"
+              ],
+              "id": "#appConfig/header/links",
+              "items": {
+                "type": "object"
+              }
+            }
+          },
+          "type": "object",
+          "default": {
+            "logo": "/Repo-Booster-icon.png",
+            "search": true,
+            "colorMode": true,
+            "links": [
+              {
+                "icon": "i-simple-icons-github",
+                "to": "https://github.com/repo-booster",
+                "target": "_blank",
+                "ariaLabel": "Repo-Booster GitHub Repository"
+              },
+              {
+                "icon": "i-simple-icons-discord",
+                "to": "https://discord.com/invite/repo-booster",
+                "target": "_blank",
+                "ariaLabel": "Repo-Booster Discord"
+              }
+            ]
+          }
+        },
+        "footer": {
+          "title": "Footer",
+          "description": "Footer configuration.",
+          "tags": [
+            "@studioIcon i-mdi-page-layout-footer"
+          ],
+          "id": "#appConfig/footer",
+          "properties": {
+            "credits": {
+              "type": "string",
+              "title": "Footer credits",
+              "description": "Text to display as credits in the footer.",
+              "default": "© 2025 Repo-Booster",
+              "tags": [
+                "@studioInput string",
+                "@studioIcon i-mdi-circle-edit-outline"
+              ],
+              "id": "#appConfig/footer/credits"
+            },
+            "colorMode": {
+              "type": "boolean",
+              "title": "Color Mode",
+              "description": "Hide or display the color mode button in the footer.",
+              "default": false,
+              "tags": [
+                "@studioInput boolean",
+                "@studioIcon i-mdi-moon-waning-crescent"
+              ],
+              "id": "#appConfig/footer/colorMode"
+            },
+            "links": {
+              "type": "array",
+              "title": "Links",
+              "description": "Array of links displayed in the footer.",
+              "default": [
+                {
+                  "icon": "i-simple-icons-github",
+                  "to": "https://github.com/repo-booster",
+                  "target": "_blank",
+                  "ariaLabel": "Repo-Booster GitHub Repository"
+                },
+                {
+                  "icon": "i-simple-icons-discord",
+                  "to": "https://discord.com/invite/repo-booster",
+                  "target": "_blank",
+                  "ariaLabel": "Repo-Booster Discord"
+                },
+                {
+                  "icon": "i-simple-icons-twitter",
+                  "to": "https://twitter.com/repo_booster",
+                  "target": "_blank",
+                  "ariaLabel": "Repo-Booster Twitter"
+                }
+              ],
+              "tags": [
+                "@studioInput array",
+                "@studioIcon i-mdi-link-variant"
+              ],
+              "id": "#appConfig/footer/links",
+              "items": {
+                "type": "object"
+              }
+            }
+          },
+          "type": "object",
+          "default": {
+            "credits": "© 2025 Repo-Booster",
+            "colorMode": false,
+            "links": [
+              {
+                "icon": "i-simple-icons-github",
+                "to": "https://github.com/repo-booster",
+                "target": "_blank",
+                "ariaLabel": "Repo-Booster GitHub Repository"
+              },
+              {
+                "icon": "i-simple-icons-discord",
+                "to": "https://discord.com/invite/repo-booster",
+                "target": "_blank",
+                "ariaLabel": "Repo-Booster Discord"
+              },
+              {
+                "icon": "i-simple-icons-twitter",
+                "to": "https://twitter.com/repo_booster",
+                "target": "_blank",
+                "ariaLabel": "Repo-Booster Twitter"
+              }
+            ]
+          }
+        },
+        "toc": {
+          "title": "Table of contents",
+          "description": "TOC configuration.",
+          "tags": [
+            "@studioIcon i-mdi-table-of-contents"
+          ],
+          "id": "#appConfig/toc",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title",
+              "description": "Text to display as title of the main TOC.",
+              "default": "Table of Contents",
+              "tags": [
+                "@studioInput string",
+                "@studioIcon i-mdi-format-title"
+              ],
+              "id": "#appConfig/toc/title"
+            },
+            "bottom": {
+              "title": "Bottom",
+              "description": "Bottom TOC configuration.",
+              "tags": [
+                "@studioIcon i-mdi-table-of-contents"
+              ],
+              "id": "#appConfig/toc/bottom",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                  "description": "Text to display as title of the bottom TOC.",
+                  "default": "Community",
+                  "tags": [
+                    "@studioInput string",
+                    "@studioIcon i-mdi-format-title"
+                  ],
+                  "id": "#appConfig/toc/bottom/title"
+                },
+                "edit": {
+                  "type": "string",
+                  "title": "Edit Page Link",
+                  "description": "URL of your repository content folder.",
+                  "default": "https://github.com/repo-booster/docs/edit/main/content",
+                  "tags": [
+                    "@studioInput string",
+                    "@studioIcon i-ph-note-pencil"
+                  ],
+                  "id": "#appConfig/toc/bottom/edit"
+                },
+                "links": {
+                  "type": "array",
+                  "title": "Links",
+                  "description": "Array of links displayed in the bottom TOC.",
+                  "default": [
+                    {
+                      "icon": "i-heroicons-star",
+                      "label": "Star on GitHub",
+                      "to": "https://github.com/repo-booster",
+                      "target": "_blank"
+                    },
+                    {
+                      "icon": "i-heroicons-book-open",
+                      "label": "Repo-Booster Docs",
+                      "to": "https://repo-booster.com/docs",
+                      "target": "_blank"
+                    },
+                    {
+                      "icon": "i-simple-icons-repo",
+                      "label": "Upgrade to Pro",
+                      "to": "https://repo-booster.com/pricing",
+                      "target": "_blank"
+                    }
+                  ],
+                  "tags": [
+                    "@studioInput array",
+                    "@studioIcon i-mdi-link-variant"
+                  ],
+                  "id": "#appConfig/toc/bottom/links",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              },
+              "type": "object",
+              "default": {
+                "title": "Community",
+                "edit": "https://github.com/repo-booster/docs/edit/main/content",
+                "links": [
+                  {
+                    "icon": "i-heroicons-star",
+                    "label": "Star on GitHub",
+                    "to": "https://github.com/repo-booster",
+                    "target": "_blank"
+                  },
+                  {
+                    "icon": "i-heroicons-book-open",
+                    "label": "Repo-Booster Docs",
+                    "to": "https://repo-booster.com/docs",
+                    "target": "_blank"
+                  },
+                  {
+                    "icon": "i-simple-icons-repo",
+                    "label": "Upgrade to Pro",
+                    "to": "https://repo-booster.com/pricing",
+                    "target": "_blank"
+                  }
+                ]
+              }
+            }
+          },
+          "type": "object",
+          "default": {
+            "title": "Table of Contents",
+            "bottom": {
+              "title": "Community",
+              "edit": "https://github.com/repo-booster/docs/edit/main/content",
+              "links": [
+                {
+                  "icon": "i-heroicons-star",
+                  "label": "Star on GitHub",
+                  "to": "https://github.com/repo-booster",
+                  "target": "_blank"
+                },
+                {
+                  "icon": "i-heroicons-book-open",
+                  "label": "Repo-Booster Docs",
+                  "to": "https://repo-booster.com/docs",
+                  "target": "_blank"
+                },
+                {
+                  "icon": "i-simple-icons-repo",
+                  "label": "Upgrade to Pro",
+                  "to": "https://repo-booster.com/pricing",
+                  "target": "_blank"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "type": "object",
+      "default": {
+        "icon": {
+          "size": {},
+          "class": "",
+          "attrs": {
+            "aria-hidden": true
+          },
+          "mode": "css",
+          "aliases": {},
+          "cssSelectorPrefix": "i-",
+          "cssLayer": {},
+          "cssWherePseudo": true,
+          "collections": null,
+          "iconifyApiEndpoint": "https://api.iconify.design",
+          "fallbackToApi": true,
+          "localApiEndpoint": "/api/_nuxt_icon",
+          "fetchTimeout": 1500
+        },
+        "ui": {
+          "icons": {
+            "search": "i-heroicons-magnifying-glass-20-solid",
+            "dark": "i-heroicons-moon-20-solid",
+            "light": "i-heroicons-sun-20-solid",
+            "external": "i-heroicons-arrow-up-right-20-solid",
+            "chevron": "i-heroicons-chevron-down-20-solid",
+            "hash": "i-heroicons-hashtag-20-solid"
+          },
+          "primary": "blue",
+          "gray": "cool"
+        },
+        "seo": {
+          "siteName": "Repo-Booster Documentation"
+        },
+        "header": {
+          "logo": "/Repo-Booster-icon.png",
+          "search": true,
+          "colorMode": true,
+          "links": [
+            {
+              "icon": "i-simple-icons-github",
+              "to": "https://github.com/repo-booster",
+              "target": "_blank",
+              "ariaLabel": "Repo-Booster GitHub Repository"
+            },
+            {
+              "icon": "i-simple-icons-discord",
+              "to": "https://discord.com/invite/repo-booster",
+              "target": "_blank",
+              "ariaLabel": "Repo-Booster Discord"
+            }
+          ]
+        },
+        "footer": {
+          "credits": "© 2025 Repo-Booster",
+          "colorMode": false,
+          "links": [
+            {
+              "icon": "i-simple-icons-github",
+              "to": "https://github.com/repo-booster",
+              "target": "_blank",
+              "ariaLabel": "Repo-Booster GitHub Repository"
+            },
+            {
+              "icon": "i-simple-icons-discord",
+              "to": "https://discord.com/invite/repo-booster",
+              "target": "_blank",
+              "ariaLabel": "Repo-Booster Discord"
+            },
+            {
+              "icon": "i-simple-icons-twitter",
+              "to": "https://twitter.com/repo_booster",
+              "target": "_blank",
+              "ariaLabel": "Repo-Booster Twitter"
+            }
+          ]
+        },
+        "toc": {
+          "title": "Table of Contents",
+          "bottom": {
+            "title": "Community",
+            "edit": "https://github.com/repo-booster/docs/edit/main/content",
+            "links": [
+              {
+                "icon": "i-heroicons-star",
+                "label": "Star on GitHub",
+                "to": "https://github.com/repo-booster",
+                "target": "_blank"
+              },
+              {
+                "icon": "i-heroicons-book-open",
+                "label": "Repo-Booster Docs",
+                "to": "https://repo-booster.com/docs",
+                "target": "_blank"
+              },
+              {
+                "icon": "i-simple-icons-repo",
+                "label": "Upgrade to Pro",
+                "to": "https://repo-booster.com/pricing",
+                "target": "_blank"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "default": {
+    "appConfig": {
+      "icon": {
+        "size": {},
+        "class": "",
+        "attrs": {
+          "aria-hidden": true
+        },
+        "mode": "css",
+        "aliases": {},
+        "cssSelectorPrefix": "i-",
+        "cssLayer": {},
+        "cssWherePseudo": true,
+        "collections": null,
+        "iconifyApiEndpoint": "https://api.iconify.design",
+        "fallbackToApi": true,
+        "localApiEndpoint": "/api/_nuxt_icon",
+        "fetchTimeout": 1500
+      },
+      "ui": {
+        "icons": {
+          "search": "i-heroicons-magnifying-glass-20-solid",
+          "dark": "i-heroicons-moon-20-solid",
+          "light": "i-heroicons-sun-20-solid",
+          "external": "i-heroicons-arrow-up-right-20-solid",
+          "chevron": "i-heroicons-chevron-down-20-solid",
+          "hash": "i-heroicons-hashtag-20-solid"
+        },
+        "primary": "blue",
+        "gray": "cool"
+      },
+      "seo": {
+        "siteName": "Repo-Booster Documentation"
+      },
+      "header": {
+        "logo": "/Repo-Booster-icon.png",
+        "search": true,
+        "colorMode": true,
+        "links": [
+          {
+            "icon": "i-simple-icons-github",
+            "to": "https://github.com/repo-booster",
+            "target": "_blank",
+            "ariaLabel": "Repo-Booster GitHub Repository"
+          },
+          {
+            "icon": "i-simple-icons-discord",
+            "to": "https://discord.com/invite/repo-booster",
+            "target": "_blank",
+            "ariaLabel": "Repo-Booster Discord"
+          }
+        ]
+      },
+      "footer": {
+        "credits": "© 2025 Repo-Booster",
+        "colorMode": false,
+        "links": [
+          {
+            "icon": "i-simple-icons-github",
+            "to": "https://github.com/repo-booster",
+            "target": "_blank",
+            "ariaLabel": "Repo-Booster GitHub Repository"
+          },
+          {
+            "icon": "i-simple-icons-discord",
+            "to": "https://discord.com/invite/repo-booster",
+            "target": "_blank",
+            "ariaLabel": "Repo-Booster Discord"
+          },
+          {
+            "icon": "i-simple-icons-twitter",
+            "to": "https://twitter.com/repo_booster",
+            "target": "_blank",
+            "ariaLabel": "Repo-Booster Twitter"
+          }
+        ]
+      },
+      "toc": {
+        "title": "Table of Contents",
+        "bottom": {
+          "title": "Community",
+          "edit": "https://github.com/repo-booster/docs/edit/main/content",
+          "links": [
+            {
+              "icon": "i-heroicons-star",
+              "label": "Star on GitHub",
+              "to": "https://github.com/repo-booster",
+              "target": "_blank"
+            },
+            {
+              "icon": "i-heroicons-book-open",
+              "label": "Repo-Booster Docs",
+              "to": "https://repo-booster.com/docs",
+              "target": "_blank"
+            },
+            {
+              "icon": "i-simple-icons-repo",
+              "label": "Upgrade to Pro",
+              "to": "https://repo-booster.com/pricing",
+              "target": "_blank"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
