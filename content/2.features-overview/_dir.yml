@@ -1,0 +1,14 @@
+title: Features Overview
+items:
+  - name: Features
+    path: features
+  - name: README Scanner
+    path: readme-scanner
+  - name: SEO Analysis
+    path: seo-analysis
+  - name: Social Integration
+    path: social-integration
+  - name: Star Growth
+    path: star-growth
+  - name: Traffic Insights
+    path: traffic-insights
