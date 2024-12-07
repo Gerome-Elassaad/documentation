@@ -1,4 +1,4 @@
-title: 'Repo-Booster - Docs Template'
+title: 'Documentation | Repo-Booster'
 description: Repo-Booster is a powerful tool to boost your GitHub repository's visibility and engagement with premium SEO, analytics, and automation tools.
 navigation: false
 hero:
@@ -10,7 +10,7 @@ hero:
     to: https://repo-booster.com
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
-    - label: Get started
+    - label: Getting started
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
       to: '/getting-started'
@@ -26,7 +26,7 @@ hero:
     npx repo-booster init
     ```
 features:
-  title: 'All-in-one GitHub repository tool'
+  title: 'All-in-one GitHub Repository Tool'
   links:
     - label: 'Learn more about Repo-Booster'
       icon: 'i-simple-icons-repo'
@@ -41,25 +41,25 @@ features:
       icon: 'i-simple-icons-github'
       to: 'https://github.com/repo-booster'
       target: '_blank'
-    - title: 'Markdown Support'
-      description: 'Write rich documentation in Markdown with ease.'
-      icon: 'i-simple-icons-markdown'
-      to: 'https://content.nuxt.com'
+    - title: 'Customer Support'
+      description: 'Pro / enterprise users will recieve 24/7 customer support'
+      icon: 'i-simple-icons-PaperAirplaneIcon'
+      to: 'malito:support@repo-booster.com'
       target: '_blank'
     - title: 'SEO Tools'
       description: 'Leverage advanced SEO insights and recommendations.'
       icon: 'i-heroicons-chart-bar'
-      to: 'https://repo-booster.com/docs/seo-tools'
+      to: 'https://docs.repo-booster.com/features-overview/seo-analysis'
       target: '_blank'
     - title: 'Analytics'
       description: 'Track repository traffic and engagement metrics.'
       icon: 'i-heroicons-chart-pie'
-      to: 'https://repo-booster.com/docs/analytics'
+      to: '/'
       target: '_blank'
     - title: 'Social Media Automation'
       description: 'Automate your project updates for social platforms.'
       icon: 'i-simple-icons-twitter'
-      to: 'https://repo-booster.com/docs/social-automation'
+      to: 'https://docs.repo-booster.com/features-overview/social-integration'
       target: '_blank'
     - title: 'Search'
       description: 'Find contributors, collaborators, and keywords easily.'

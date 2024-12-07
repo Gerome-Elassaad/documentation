@@ -84,7 +84,7 @@ export default defineNuxtSchema({
           title: 'Site Name',
           description: 'Name used in ogSiteName and used as part of your page title (e.g., My page title - Repo-Booster).',
           icon: 'i-mdi-web',
-          default: 'Repo-Booster Documentation'
+          default: 'Documentation | Repo-Booster'
         })
       }
     }),
@@ -163,7 +163,7 @@ export default defineNuxtSchema({
           default: [
             {
               icon: 'i-simple-icons-github',
-              to: 'https://github.com/repo-booster',
+              to: 'https://github.com/Gerome-Elassaad/repo-booster',
               target: '_blank',
               ariaLabel: 'Repo-Booster GitHub Repository'
             },
@@ -210,9 +210,9 @@ export default defineNuxtSchema({
             edit: field({
               type: 'string',
               title: 'Edit Page Link',
-              description: 'URL of your repository content folder.',
+              description: 'Fork and edit this page.',
               icon: 'i-ph-note-pencil',
-              default: 'https://github.com/repo-booster/docs/edit/main/content'
+              default: 'https://github.com/Gerome-Elassaad/documentation/fork'
             }),
             links: field({
               type: 'array',
