@@ -1,9 +1,6 @@
-![social-card](https://github.com/user-attachments/assets/87624fea-0f25-40b0-8100-fbe2571f5301)
 
-  <a href="https://app.netlify.com/sites/repo-booster/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/fe8e23bd-4d21-4549-98e9-08ae542dc2fc/deploy-status" alt="Netlify Status">
-  </a>
-</p>
+![social-images](https://github.com/user-attachments/assets/bd60dca4-a1e2-411b-b409-a025d5ce763b)
+
 
 ## 🌟 What is Repo-Booster?
 
@@ -45,6 +42,9 @@
    - **Custom Reports**: Generate branded reports for project reviews, stakeholder meetings, and performance evaluations.
 
 ---
+
+  ![social-image](https://github.com/user-attachments/assets/b1384e5e-e881-4052-b4dc-fcd242bb209d)
+
 
 ## 🛠️ How to Install
 
