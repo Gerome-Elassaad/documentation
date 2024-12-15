@@ -7,7 +7,7 @@
 - **Repo-Booster** is a GitHub tool driven by GitHub data insights to boost visibility, collaboration, and growth. It provides practical tools and automation for developers, teams, and open-source projects of all sizes.
 
 ## 🔗 Key Links
-- **Install On Github**: [github.com/marketplace/repo-booster](https://github.com/marketplace/repo-booster)
+- **Install On Github**: [github.com/marketplace/repo-booster](https://github.com/apps/repo-booster)
 - **Documentation**: [docs.repo-booster.com](https://docs.repo-booster.com)
 - **Main Website**: [repo-booster.com](https://repo-booster.com)
 - **App Website**: [app.repo-booster.com](https://app.repo-booster.com)
