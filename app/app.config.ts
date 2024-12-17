@@ -15,24 +15,32 @@ export default defineAppConfig({
   header: {
     title: 'Repo-Booster',
     logo: {
-      alt: 'Repo-Booster', 
-      light: '/Repo-Booster-icon.png', // Path to the logo for light mode
-      dark: '/Repo-Booster-icon.png' // Path to the logo for dark mode
+      alt: 'Repo-Booster',
+      light: '/Repo-Booster-icon.png',
+      dark: '/Repo-Booster-icon.png'
     },
-    search: true, // Enable the search bar
-    colorMode: true, // Enable the color mode toggle
+    search: true,
+    colorMode: true,
     links: [
       {
         icon: 'i-simple-icons-github',
         to: 'https://github.com/repo-booster',
         target: '_blank',
         'aria-label': 'Repo-Booster on GitHub'
+      },
+      // Docs Badge link added here
+      {
+        label: 'Docs',
+        to: 'https://docs.repo-booster.com',
+        target: '_blank',
+        class: 'ml-4 py-1 px-3 bg-blue-600 text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300 ease-in-out',
+        'aria-label': 'Repo-Booster Documentation'
       }
     ]
   },
   footer: {
     credits: 'Copyright © 2025 Repo-Booster',
-    colorMode: true, // Enable color mode toggle in the footer
+    colorMode: true,
     links: [
       {
         icon: 'i-simple-icons-repo',
@@ -68,8 +76,8 @@ export default defineAppConfig({
       links: [
         {
           icon: 'i-heroicons-star',
-          label: 'Star on GitHub',
-          to: 'https://github.com/repo-booster',
+          label: 'Install on GitHub',
+          to: 'https://github.com/apps/repo-booster',
           target: '_blank'
         },
         {
