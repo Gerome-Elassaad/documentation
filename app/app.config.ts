@@ -16,8 +16,8 @@ export default defineAppConfig({
     title: 'Repo-Booster',
     logo: {
       alt: 'Repo-Booster',
-      light: '/Repo-Booster-icon.png',
-      dark: '/Repo-Booster-icon.png'
+      light: 'Repo-Booster',
+      dark: 'Repo-Booster'
     },
     search: true,
     colorMode: true,
