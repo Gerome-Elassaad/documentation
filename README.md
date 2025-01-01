@@ -1,6 +1,5 @@
 
-![social-images](https://github.com/user-attachments/assets/bd60dca4-a1e2-411b-b409-a025d5ce763b)
-
+![social-banner](https://github.com/user-attachments/assets/6e46cd31-9432-4a11-9ce4-4c0d119f52ed)
 
 ## 🌟 What is Repo-Booster?
 
@@ -43,7 +42,7 @@
 
 ---
 
-  ![social-image](https://github.com/user-attachments/assets/b1384e5e-e881-4052-b4dc-fcd242bb209d)
+![Screenshot (56)](https://github.com/user-attachments/assets/0a8a155a-91a0-4721-ace3-fe23acd19930)
 
 
 ## 🛠️ How to Install
